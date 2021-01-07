@@ -15,7 +15,6 @@ console.log(mul(2,3))
   "browser":true//支持浏览器全局变量
 }
 */
-//注册serviceworkr
 //处理兼容性问题
 if('serviceworker' in navigator){
   window.addEventListener('load',()=>{

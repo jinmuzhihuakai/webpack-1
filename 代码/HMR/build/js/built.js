@@ -230,7 +230,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _pri
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\nconsole.log('print.js 被加载了')\nfunction print(){\n    const content='hello print2';\n    console.log(content)\n}\n/* harmony default export */ __webpack_exports__[\"default\"] = (print);\n\n//# sourceURL=webpack:///./src/js/print.js?");
+eval("__webpack_require__.r(__webpack_exports__);\nconsole.log('print.js 被加载了')\nfunction print(){\n    const content='hello print4';\n    console.log(content)\n}\n/* harmony default export */ __webpack_exports__[\"default\"] = (print);\n\n//# sourceURL=webpack:///./src/js/print.js?");
 
 /***/ }),
 

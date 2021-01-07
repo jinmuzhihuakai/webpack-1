@@ -81,7 +81,7 @@ module.exports = {
         port: 3004,
         open: true,//配置后输入npx webapck-dev-server后自动打开浏览器，无需手动输入loachost:3000
        //开启HMR
-       //当修改了webpack配置，新配置要生效，必须重新webpack服务
+       //当修改了webpack配置，新配置要生效，必须重新webpack服务 npx webpack-dev-server
         hot:true
     },
 }

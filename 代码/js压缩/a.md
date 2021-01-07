@@ -1,0 +1,1 @@
+把webpack.config.js中mode直接设置为production,就能实现js压缩

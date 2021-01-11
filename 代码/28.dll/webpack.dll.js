@@ -1,6 +1,6 @@
 /* 
 使用dll技术，对某些库（第三方库：jquery.react.vue...）进行单独打包
-当你运行webpack时，默认查找webpack.coonfig.js配置文件
+当你运行webpack时，默认查找webpack.config.js配置文件
 需求：需要运行webpack.dll.js文件
 --->webpack  --config webpack.dll.js
 */

@@ -28,7 +28,7 @@ module.exports={
         })
     ],
     mode:'development',
-     //启动devSrver指令：npx webpack-dev-seve
+     //启动devSrver指令：npx webpack-dev-server
      //启动后会在终端看到有程序并没有终止，不会出现像下载其他依赖结束后的样子
      devServer:{//特点：只会在内存中编译打包，不会有任何输出到本地代码
         contentBase:resolve(__dirname,'build'),//项目构建后的路径
@@ -36,6 +36,6 @@ module.exports={
         compress:true,
         //开发服务器端口号
         port:3000,
-        open:true//配置后输入npx webapck-dev-server后自动打开浏览器，无需手动输入loachost:3000
+        open:true//配置后输入npx webpack-dev-server后自动打开浏览器，无需手动输入loachost:3000
     }
 }

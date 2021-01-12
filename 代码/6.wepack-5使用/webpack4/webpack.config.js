@@ -1,5 +1,4 @@
 const { resolve } = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
     //webapck入口文件
     entry: './src/index.js',
@@ -16,10 +15,6 @@ module.exports = {
 
         // 默认创建一个空的html,自动引入打包输出的所有资源（js/css）
         //需求：需要有结构的html文件
-        new HtmlWebpackPlugin({
-            //复制'./src/index.html'文件，并自动引入打包输出的所有资源，无需自己手动输入
-            template: './src/index.html'
-        })
 
     ],
     mode: 'development'

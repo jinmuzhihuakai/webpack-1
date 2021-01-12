@@ -29,7 +29,7 @@ module.exports = {
                 exclude: /node_modules/,
                 loader: 'babel-loader',
                 options: {
-                    //预设：指示bael做怎么样的兼容处理
+                    //预设：指示babel做怎么样的兼容处理
                     presets: [
                         [
                             '@babel/preset-env',

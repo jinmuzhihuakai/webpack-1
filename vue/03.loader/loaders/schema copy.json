@@ -1,0 +1,10 @@
+{
+    "type":"object",
+    "properties（属性配置）":{
+        "name":{
+            "type":"string",
+            "description":"名称~"
+        },
+        "additionalProperties(允许追加属性)":true 
+    }
+}

@@ -40,8 +40,12 @@ class CopyWebpackPlugin{
                 paths.map(async(absolutePath)=>{
                     //读取玩文件
                     const data=await readFile(absolutePath)
-                    //读取文件名称
-                    const filename=path.basename(absolutePath)
+                    //读取文件名称,basename得到最后的文件名称
+                    const relativePath=path.basename(absolutePath)
+                    //和to属性结合
+                    //没有to==>reset.css
+                    //有to--->css/reset.css
+                    const filename=path.join(to,relativePath)
                     return {
                         //文件数据
                         data,
@@ -56,7 +60,7 @@ class CopyWebpackPlugin{
                   const source= new RawSource(file.data)
                   return {
                       source,
-                      filename:file.name
+                      filename:file.filename
                   }
                })
             //4.添加compilation中，输出去

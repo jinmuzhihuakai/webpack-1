@@ -16,6 +16,7 @@ module.exports={
     //  new Plugin2()
     new CopyWebpackPlugin({
         from :'public',
+        to:'css',
         ignore:['**/index.html']
     })
     ]

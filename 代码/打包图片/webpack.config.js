@@ -40,15 +40,14 @@ module.exports = {
             {//默认处理不了html中的img图片
                 test: /\.(jpg|png|gif)$/,
                 //使用一个loader
-                //下载url-loader file-loader，因为uel-loader依赖file-loader
+                //下载url-loader file-loader，因为url-loader依赖file-loader
                 loader: 'url-loader',//处理css中的图片
                 options: {//配置
-                    //图片大小小于8kb,就会被base64处理
                     //优点：减少请求数量（减轻服务器压力）
                     // 缺点：图片体积会更大（文件请求速度更慢）
                     limit: 28 * 1024,//(因为速度较慢，所以一般选择8kb-12kb的图片进行base64)
                     //问题：因为url-loader默认使用es6模块化解析，而html-loader引入图片是commonjs解析
-                    //解决：关闭uel-loader的es6模块化，使用commonjs解析
+                    //解决：关闭url-loader的es6模块化，使用commonjs解析
                     esModule:false,
                     //给打包后输出文件built.js的图片重新命名,[hash:10]取图片的hash的前十位，[ext]取原来文件拓展名
                     name:'[hash:10].[ext]'

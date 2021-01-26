@@ -1,4 +1,4 @@
-const { module } = require("../../HMR/webpack.config")
+
 
 module.exports={
   mode: 'production',

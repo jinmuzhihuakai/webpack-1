@@ -44,7 +44,6 @@ module.exports={
     },
     plugins:[
         //详细plugins的配置
-
         // 默认创建一个空的html,自动引入打包输出的所有资源（js/css）
         //需求：需要有结构的html文件
         new HtmlWebpackPlugin({

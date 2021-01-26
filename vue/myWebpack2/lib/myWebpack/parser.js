@@ -45,3 +45,4 @@ const parser={
      }
 }
 module.exports=parser
+//运行指令  npm run build

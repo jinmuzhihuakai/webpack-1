@@ -1,5 +1,5 @@
 
-const {resovle, resolve}=require('path')
+const { resolve}=require('path')
 const HtmlWebapckPlugin=require('html-webpack-plugin')
 module.exports={
     entry:'./src/index.js',
@@ -37,5 +37,6 @@ module.exports={
         //开发服务器端口号
         port:3000,
         open:true//配置后输入npx webpack-dev-server后自动打开浏览器，无需手动输入loachost:3000
-    }
+    },
+    devtool:'source-map'
 }

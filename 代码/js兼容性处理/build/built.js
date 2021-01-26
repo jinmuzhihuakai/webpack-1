@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("// import '@babel/polyfill'\nfunction add(x, y) {\n  return x + y;\n} // 下一行eslint所有规则都失效（下一行不进行eslint检查）\n// eslint-disable-next-line\n\n\nconsole.log(add(3, 4));\nvar promise = new Promise(function (resolve) {\n  setTimeout(function () {\n    console.log('定时器执行完了~');\n    resolve();\n  });\n}, 1000);\nconsole.log(promise);\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("// const { resolve } = require(\"../../../vue/02.vue_cli/webpack.dev\");\n// import '@babel/polyfill'\nfunction add(x, y) {\n  return x + y;\n}\n\nfunction conut() {\n  console.log(new Date().getTime());\n\n  for (var i in 10) {\n    console.log(add(11, 22));\n  }\n\n  console.log(new Date().getTime());\n}\n\nconut(); // 下一行eslint所有规则都失效（下一行不进行eslint检查）\n// eslint-disable-next-line\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ })
 

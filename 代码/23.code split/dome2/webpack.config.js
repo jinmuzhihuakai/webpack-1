@@ -3,7 +3,7 @@ const HtmlWebPackPlugin=require('html-webpack-plugin')
 
 module.exports = {
     // entry: './src/js/index.js', //单入口
-    entry:   {//有一个入口，最终输出就有一个bundle
+    entry:   {
         main:'./src/js/index.js',
         test:'./src/js/test.js'
     },

@@ -36,7 +36,7 @@ module.exports = {
                             //该文件引入的是最新版本所以引入的bael依赖包也不同,也不需要下面的配置
                             {
                                 //按需加载
-                                useBuiltIns: 'useage',
+                                useBuiltIns: 'usage',
                                 //指定core-js版本
                                 corejs: {
                                     version: 3

@@ -41,7 +41,7 @@ module.exports={
         //启动gzip，压缩代码，体积更小，打包速度更快
         compress:true,
         //开发服务器端口号
-        port:5000,   
+        port:5002,
         //域名
         host:'localhost' ,
         open:true,//配置后输入npx webpack-dev-server后自动打开浏览器，无需手动输入loachost:3000

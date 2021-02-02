@@ -6,7 +6,7 @@ function sum(...args) {
 通过js代码，让某个文件被单独打包成一个chunk，j
 import动态导入语法：能将某个文件单独打包
 */
-import(/* webpackChunkName:'test's*/'./test')
+import(/* webpackChunkName:'test'*/'./test')
 .then((result)=>{
 //文件加载成功
 console.log(result)

@@ -9,8 +9,7 @@ module.exports = {
     plugins: [
         new HtmlWebPackPlugin({
             template:'./src/index.html',
-        }),
-       
+        }), 
     ],
     mode: 'production',
     externals:{//script手动引入下，目的比打包这些大库快多了

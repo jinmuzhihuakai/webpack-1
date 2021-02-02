@@ -67,7 +67,7 @@ module.exports = {
             // }
         },
         runtimeChunk:{//将main模块的记录其他模块的hash单独打包为一个文件 runtime
-        //解决：修改a文件导致b文件的contenthash变化
+        //解决：修改被引入的a文件导致b文件的contenthash变化
             name:entrypoint=>`runtime-${entrypoint.name}`
         },
         minimizer:[

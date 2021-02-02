@@ -1,8 +1,6 @@
-
-
-module.exports={
+{
   mode: 'development',
-  context: '/',
+  context: '/Users/heqin/Desktop/webpack/vue/02.vue_cli',
   node: {
     setImmediate: false,
     process: 'mock',
@@ -13,14 +11,14 @@ module.exports={
     child_process: 'empty'
   },
   output: {
-    path: '//dist',
+    path: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/dist',
     filename: 'js/[name].js',
     publicPath: '/',
     chunkFilename: 'js/[name].js'
   },
   resolve: {
     alias: {
-      '@': '//src',
+      '@': '/Users/heqin/Desktop/webpack/vue/02.vue_cli/src',
       vue$: 'vue/dist/vue.runtime.esm.js'
     },
     extensions: [
@@ -33,8 +31,8 @@ module.exports={
     ],
     modules: [
       'node_modules',
-      '//node_modules',
-      '//node_modules/@vue/cli-service/node_modules'
+      '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules',
+      '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/@vue/cli-service/node_modules'
     ],
     plugins: [
       /* config.resolve.plugin('pnp') */
@@ -43,10 +41,10 @@ module.exports={
   },
   resolveLoader: {
     modules: [
-      '//node_modules/@vue/cli-plugin-babel/node_modules',
+      '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/@vue/cli-plugin-babel/node_modules',
       'node_modules',
-      '//node_modules',
-      '//node_modules/@vue/cli-service/node_modules'
+      '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules',
+      '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/@vue/cli-service/node_modules'
     ],
     plugins: [
       /* config.resolve.plugin('pnp-loaders') */
@@ -62,20 +60,20 @@ module.exports={
         use: [
           /* config.module.rule('vue').use('cache-loader') */
           {
-            loader: '//node_modules/cache-loader/dist/cjs.js',
+            loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/cache-loader/dist/cjs.js',
             options: {
-              cacheDirectory: '//node_modules/.cache/vue-loader',
+              cacheDirectory: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/.cache/vue-loader',
               cacheIdentifier: '1237b676'
             }
           },
           /* config.module.rule('vue').use('vue-loader') */
           {
-            loader: '//node_modules/vue-loader/lib/index.js',
+            loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/vue-loader/lib/index.js',
             options: {
               compilerOptions: {
                 whitespace: 'condense'
               },
-              cacheDirectory: '//node_modules/.cache/vue-loader',
+              cacheDirectory: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/.cache/vue-loader',
               cacheIdentifier: '1237b676'
             }
           }
@@ -87,11 +85,11 @@ module.exports={
         use: [
           /* config.module.rule('images').use('url-loader') */
           {
-            loader: '//node_modules/url-loader/dist/cjs.js',
+            loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/url-loader/dist/cjs.js',
             options: {
               limit: 4096,
               fallback: {
-                loader: '//node_modules/file-loader/dist/cjs.js',
+                loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/file-loader/dist/cjs.js',
                 options: {
                   name: 'img/[name].[hash:8].[ext]'
                 }
@@ -106,7 +104,7 @@ module.exports={
         use: [
           /* config.module.rule('svg').use('file-loader') */
           {
-            loader: '//node_modules/file-loader/dist/cjs.js',
+            loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/file-loader/dist/cjs.js',
             options: {
               name: 'img/[name].[hash:8].[ext]'
             }
@@ -119,11 +117,11 @@ module.exports={
         use: [
           /* config.module.rule('media').use('url-loader') */
           {
-            loader: '//node_modules/url-loader/dist/cjs.js',
+            loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/url-loader/dist/cjs.js',
             options: {
               limit: 4096,
               fallback: {
-                loader: '//node_modules/file-loader/dist/cjs.js',
+                loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/file-loader/dist/cjs.js',
                 options: {
                   name: 'media/[name].[hash:8].[ext]'
                 }
@@ -138,11 +136,11 @@ module.exports={
         use: [
           /* config.module.rule('fonts').use('url-loader') */
           {
-            loader: '//node_modules/url-loader/dist/cjs.js',
+            loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/url-loader/dist/cjs.js',
             options: {
               limit: 4096,
               fallback: {
-                loader: '//node_modules/file-loader/dist/cjs.js',
+                loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/file-loader/dist/cjs.js',
                 options: {
                   name: 'fonts/[name].[hash:8].[ext]'
                 }
@@ -190,7 +188,7 @@ module.exports={
             use: [
               /* config.module.rule('css').oneOf('vue-modules').use('vue-style-loader') */
               {
-                loader: '//node_modules/vue-style-loader/index.js',
+                loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/vue-style-loader/index.js',
                 options: {
                   sourceMap: false,
                   shadowMode: false
@@ -198,7 +196,7 @@ module.exports={
               },
               /* config.module.rule('css').oneOf('vue-modules').use('css-loader') */
               {
-                loader: '//node_modules/css-loader/dist/cjs.js',
+                loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/css-loader/dist/cjs.js',
                 options: {
                   sourceMap: false,
                   importLoaders: 2,
@@ -209,7 +207,7 @@ module.exports={
               },
               /* config.module.rule('css').oneOf('vue-modules').use('postcss-loader') */
               {
-                loader: '//node_modules/postcss-loader/src/index.js',
+                loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/postcss-loader/src/index.js',
                 options: {
                   sourceMap: false,
                   plugins: [
@@ -225,7 +223,7 @@ module.exports={
             use: [
               /* config.module.rule('css').oneOf('vue').use('vue-style-loader') */
               {
-                loader: '//node_modules/vue-style-loader/index.js',
+                loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/vue-style-loader/index.js',
                 options: {
                   sourceMap: false,
                   shadowMode: false
@@ -233,7 +231,7 @@ module.exports={
               },
               /* config.module.rule('css').oneOf('vue').use('css-loader') */
               {
-                loader: '//node_modules/css-loader/dist/cjs.js',
+                loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/css-loader/dist/cjs.js',
                 options: {
                   sourceMap: false,
                   importLoaders: 2
@@ -241,7 +239,7 @@ module.exports={
               },
               /* config.module.rule('css').oneOf('vue').use('postcss-loader') */
               {
-                loader: '//node_modules/postcss-loader/src/index.js',
+                loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/postcss-loader/src/index.js',
                 options: {
                   sourceMap: false,
                   plugins: [
@@ -257,7 +255,7 @@ module.exports={
             use: [
               /* config.module.rule('css').oneOf('normal-modules').use('vue-style-loader') */
               {
-                loader: '//node_modules/vue-style-loader/index.js',
+                loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/vue-style-loader/index.js',
                 options: {
                   sourceMap: false,
                   shadowMode: false
@@ -265,7 +263,7 @@ module.exports={
               },
               /* config.module.rule('css').oneOf('normal-modules').use('css-loader') */
               {
-                loader: '//node_modules/css-loader/dist/cjs.js',
+                loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/css-loader/dist/cjs.js',
                 options: {
                   sourceMap: false,
                   importLoaders: 2,
@@ -276,7 +274,7 @@ module.exports={
               },
               /* config.module.rule('css').oneOf('normal-modules').use('postcss-loader') */
               {
-                loader: '//node_modules/postcss-loader/src/index.js',
+                loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/postcss-loader/src/index.js',
                 options: {
                   sourceMap: false,
                   plugins: [
@@ -291,7 +289,7 @@ module.exports={
             use: [
               /* config.module.rule('css').oneOf('normal').use('vue-style-loader') */
               {
-                loader: '//node_modules/vue-style-loader/index.js',
+                loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/vue-style-loader/index.js',
                 options: {
                   sourceMap: false,
                   shadowMode: false
@@ -299,7 +297,7 @@ module.exports={
               },
               /* config.module.rule('css').oneOf('normal').use('css-loader') */
               {
-                loader: '//node_modules/css-loader/dist/cjs.js',
+                loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/css-loader/dist/cjs.js',
                 options: {
                   sourceMap: false,
                   importLoaders: 2
@@ -307,7 +305,7 @@ module.exports={
               },
               /* config.module.rule('css').oneOf('normal').use('postcss-loader') */
               {
-                loader: '//node_modules/postcss-loader/src/index.js',
+                loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/postcss-loader/src/index.js',
                 options: {
                   sourceMap: false,
                   plugins: [
@@ -329,7 +327,7 @@ module.exports={
             use: [
               /* config.module.rule('postcss').oneOf('vue-modules').use('vue-style-loader') */
               {
-                loader: '//node_modules/vue-style-loader/index.js',
+                loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/vue-style-loader/index.js',
                 options: {
                   sourceMap: false,
                   shadowMode: false
@@ -337,7 +335,7 @@ module.exports={
               },
               /* config.module.rule('postcss').oneOf('vue-modules').use('css-loader') */
               {
-                loader: '//node_modules/css-loader/dist/cjs.js',
+                loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/css-loader/dist/cjs.js',
                 options: {
                   sourceMap: false,
                   importLoaders: 2,
@@ -348,7 +346,7 @@ module.exports={
               },
               /* config.module.rule('postcss').oneOf('vue-modules').use('postcss-loader') */
               {
-                loader: '//node_modules/postcss-loader/src/index.js',
+                loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/postcss-loader/src/index.js',
                 options: {
                   sourceMap: false,
                   plugins: [
@@ -364,7 +362,7 @@ module.exports={
             use: [
               /* config.module.rule('postcss').oneOf('vue').use('vue-style-loader') */
               {
-                loader: '//node_modules/vue-style-loader/index.js',
+                loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/vue-style-loader/index.js',
                 options: {
                   sourceMap: false,
                   shadowMode: false
@@ -372,7 +370,7 @@ module.exports={
               },
               /* config.module.rule('postcss').oneOf('vue').use('css-loader') */
               {
-                loader: '//node_modules/css-loader/dist/cjs.js',
+                loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/css-loader/dist/cjs.js',
                 options: {
                   sourceMap: false,
                   importLoaders: 2
@@ -380,7 +378,7 @@ module.exports={
               },
               /* config.module.rule('postcss').oneOf('vue').use('postcss-loader') */
               {
-                loader: '//node_modules/postcss-loader/src/index.js',
+                loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/postcss-loader/src/index.js',
                 options: {
                   sourceMap: false,
                   plugins: [
@@ -396,7 +394,7 @@ module.exports={
             use: [
               /* config.module.rule('postcss').oneOf('normal-modules').use('vue-style-loader') */
               {
-                loader: '//node_modules/vue-style-loader/index.js',
+                loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/vue-style-loader/index.js',
                 options: {
                   sourceMap: false,
                   shadowMode: false
@@ -404,7 +402,7 @@ module.exports={
               },
               /* config.module.rule('postcss').oneOf('normal-modules').use('css-loader') */
               {
-                loader: '//node_modules/css-loader/dist/cjs.js',
+                loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/css-loader/dist/cjs.js',
                 options: {
                   sourceMap: false,
                   importLoaders: 2,
@@ -415,7 +413,7 @@ module.exports={
               },
               /* config.module.rule('postcss').oneOf('normal-modules').use('postcss-loader') */
               {
-                loader: '//node_modules/postcss-loader/src/index.js',
+                loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/postcss-loader/src/index.js',
                 options: {
                   sourceMap: false,
                   plugins: [
@@ -430,7 +428,7 @@ module.exports={
             use: [
               /* config.module.rule('postcss').oneOf('normal').use('vue-style-loader') */
               {
-                loader: '//node_modules/vue-style-loader/index.js',
+                loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/vue-style-loader/index.js',
                 options: {
                   sourceMap: false,
                   shadowMode: false
@@ -438,7 +436,7 @@ module.exports={
               },
               /* config.module.rule('postcss').oneOf('normal').use('css-loader') */
               {
-                loader: '//node_modules/css-loader/dist/cjs.js',
+                loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/css-loader/dist/cjs.js',
                 options: {
                   sourceMap: false,
                   importLoaders: 2
@@ -446,7 +444,7 @@ module.exports={
               },
               /* config.module.rule('postcss').oneOf('normal').use('postcss-loader') */
               {
-                loader: '//node_modules/postcss-loader/src/index.js',
+                loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/postcss-loader/src/index.js',
                 options: {
                   sourceMap: false,
                   plugins: [
@@ -468,7 +466,7 @@ module.exports={
             use: [
               /* config.module.rule('scss').oneOf('vue-modules').use('vue-style-loader') */
               {
-                loader: '//node_modules/vue-style-loader/index.js',
+                loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/vue-style-loader/index.js',
                 options: {
                   sourceMap: false,
                   shadowMode: false
@@ -476,7 +474,7 @@ module.exports={
               },
               /* config.module.rule('scss').oneOf('vue-modules').use('css-loader') */
               {
-                loader: '//node_modules/css-loader/dist/cjs.js',
+                loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/css-loader/dist/cjs.js',
                 options: {
                   sourceMap: false,
                   importLoaders: 2,
@@ -487,7 +485,7 @@ module.exports={
               },
               /* config.module.rule('scss').oneOf('vue-modules').use('postcss-loader') */
               {
-                loader: '//node_modules/postcss-loader/src/index.js',
+                loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/postcss-loader/src/index.js',
                 options: {
                   sourceMap: false,
                   plugins: [
@@ -510,7 +508,7 @@ module.exports={
             use: [
               /* config.module.rule('scss').oneOf('vue').use('vue-style-loader') */
               {
-                loader: '//node_modules/vue-style-loader/index.js',
+                loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/vue-style-loader/index.js',
                 options: {
                   sourceMap: false,
                   shadowMode: false
@@ -518,7 +516,7 @@ module.exports={
               },
               /* config.module.rule('scss').oneOf('vue').use('css-loader') */
               {
-                loader: '//node_modules/css-loader/dist/cjs.js',
+                loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/css-loader/dist/cjs.js',
                 options: {
                   sourceMap: false,
                   importLoaders: 2
@@ -526,7 +524,7 @@ module.exports={
               },
               /* config.module.rule('scss').oneOf('vue').use('postcss-loader') */
               {
-                loader: '//node_modules/postcss-loader/src/index.js',
+                loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/postcss-loader/src/index.js',
                 options: {
                   sourceMap: false,
                   plugins: [
@@ -549,7 +547,7 @@ module.exports={
             use: [
               /* config.module.rule('scss').oneOf('normal-modules').use('vue-style-loader') */
               {
-                loader: '//node_modules/vue-style-loader/index.js',
+                loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/vue-style-loader/index.js',
                 options: {
                   sourceMap: false,
                   shadowMode: false
@@ -557,7 +555,7 @@ module.exports={
               },
               /* config.module.rule('scss').oneOf('normal-modules').use('css-loader') */
               {
-                loader: '//node_modules/css-loader/dist/cjs.js',
+                loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/css-loader/dist/cjs.js',
                 options: {
                   sourceMap: false,
                   importLoaders: 2,
@@ -568,7 +566,7 @@ module.exports={
               },
               /* config.module.rule('scss').oneOf('normal-modules').use('postcss-loader') */
               {
-                loader: '//node_modules/postcss-loader/src/index.js',
+                loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/postcss-loader/src/index.js',
                 options: {
                   sourceMap: false,
                   plugins: [
@@ -590,7 +588,7 @@ module.exports={
             use: [
               /* config.module.rule('scss').oneOf('normal').use('vue-style-loader') */
               {
-                loader: '//node_modules/vue-style-loader/index.js',
+                loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/vue-style-loader/index.js',
                 options: {
                   sourceMap: false,
                   shadowMode: false
@@ -598,7 +596,7 @@ module.exports={
               },
               /* config.module.rule('scss').oneOf('normal').use('css-loader') */
               {
-                loader: '//node_modules/css-loader/dist/cjs.js',
+                loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/css-loader/dist/cjs.js',
                 options: {
                   sourceMap: false,
                   importLoaders: 2
@@ -606,7 +604,7 @@ module.exports={
               },
               /* config.module.rule('scss').oneOf('normal').use('postcss-loader') */
               {
-                loader: '//node_modules/postcss-loader/src/index.js',
+                loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/postcss-loader/src/index.js',
                 options: {
                   sourceMap: false,
                   plugins: [
@@ -635,7 +633,7 @@ module.exports={
             use: [
               /* config.module.rule('sass').oneOf('vue-modules').use('vue-style-loader') */
               {
-                loader: '//node_modules/vue-style-loader/index.js',
+                loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/vue-style-loader/index.js',
                 options: {
                   sourceMap: false,
                   shadowMode: false
@@ -643,7 +641,7 @@ module.exports={
               },
               /* config.module.rule('sass').oneOf('vue-modules').use('css-loader') */
               {
-                loader: '//node_modules/css-loader/dist/cjs.js',
+                loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/css-loader/dist/cjs.js',
                 options: {
                   sourceMap: false,
                   importLoaders: 2,
@@ -654,7 +652,7 @@ module.exports={
               },
               /* config.module.rule('sass').oneOf('vue-modules').use('postcss-loader') */
               {
-                loader: '//node_modules/postcss-loader/src/index.js',
+                loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/postcss-loader/src/index.js',
                 options: {
                   sourceMap: false,
                   plugins: [
@@ -680,7 +678,7 @@ module.exports={
             use: [
               /* config.module.rule('sass').oneOf('vue').use('vue-style-loader') */
               {
-                loader: '//node_modules/vue-style-loader/index.js',
+                loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/vue-style-loader/index.js',
                 options: {
                   sourceMap: false,
                   shadowMode: false
@@ -688,7 +686,7 @@ module.exports={
               },
               /* config.module.rule('sass').oneOf('vue').use('css-loader') */
               {
-                loader: '//node_modules/css-loader/dist/cjs.js',
+                loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/css-loader/dist/cjs.js',
                 options: {
                   sourceMap: false,
                   importLoaders: 2
@@ -696,7 +694,7 @@ module.exports={
               },
               /* config.module.rule('sass').oneOf('vue').use('postcss-loader') */
               {
-                loader: '//node_modules/postcss-loader/src/index.js',
+                loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/postcss-loader/src/index.js',
                 options: {
                   sourceMap: false,
                   plugins: [
@@ -722,7 +720,7 @@ module.exports={
             use: [
               /* config.module.rule('sass').oneOf('normal-modules').use('vue-style-loader') */
               {
-                loader: '//node_modules/vue-style-loader/index.js',
+                loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/vue-style-loader/index.js',
                 options: {
                   sourceMap: false,
                   shadowMode: false
@@ -730,7 +728,7 @@ module.exports={
               },
               /* config.module.rule('sass').oneOf('normal-modules').use('css-loader') */
               {
-                loader: '//node_modules/css-loader/dist/cjs.js',
+                loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/css-loader/dist/cjs.js',
                 options: {
                   sourceMap: false,
                   importLoaders: 2,
@@ -741,7 +739,7 @@ module.exports={
               },
               /* config.module.rule('sass').oneOf('normal-modules').use('postcss-loader') */
               {
-                loader: '//node_modules/postcss-loader/src/index.js',
+                loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/postcss-loader/src/index.js',
                 options: {
                   sourceMap: false,
                   plugins: [
@@ -766,7 +764,7 @@ module.exports={
             use: [
               /* config.module.rule('sass').oneOf('normal').use('vue-style-loader') */
               {
-                loader: '//node_modules/vue-style-loader/index.js',
+                loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/vue-style-loader/index.js',
                 options: {
                   sourceMap: false,
                   shadowMode: false
@@ -774,7 +772,7 @@ module.exports={
               },
               /* config.module.rule('sass').oneOf('normal').use('css-loader') */
               {
-                loader: '//node_modules/css-loader/dist/cjs.js',
+                loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/css-loader/dist/cjs.js',
                 options: {
                   sourceMap: false,
                   importLoaders: 2
@@ -782,7 +780,7 @@ module.exports={
               },
               /* config.module.rule('sass').oneOf('normal').use('postcss-loader') */
               {
-                loader: '//node_modules/postcss-loader/src/index.js',
+                loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/postcss-loader/src/index.js',
                 options: {
                   sourceMap: false,
                   plugins: [
@@ -814,7 +812,7 @@ module.exports={
             use: [
               /* config.module.rule('less').oneOf('vue-modules').use('vue-style-loader') */
               {
-                loader: '//node_modules/vue-style-loader/index.js',
+                loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/vue-style-loader/index.js',
                 options: {
                   sourceMap: false,
                   shadowMode: false
@@ -822,7 +820,7 @@ module.exports={
               },
               /* config.module.rule('less').oneOf('vue-modules').use('css-loader') */
               {
-                loader: '//node_modules/css-loader/dist/cjs.js',
+                loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/css-loader/dist/cjs.js',
                 options: {
                   sourceMap: false,
                   importLoaders: 2,
@@ -833,7 +831,7 @@ module.exports={
               },
               /* config.module.rule('less').oneOf('vue-modules').use('postcss-loader') */
               {
-                loader: '//node_modules/postcss-loader/src/index.js',
+                loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/postcss-loader/src/index.js',
                 options: {
                   sourceMap: false,
                   plugins: [
@@ -843,7 +841,7 @@ module.exports={
               },
               /* config.module.rule('less').oneOf('vue-modules').use('less-loader') */
               {
-                loader: '/Users/heqin/Desktop/webpack/代码/node_modules/less-loader/dist/cjs.js',
+                loader: 'less-loader',
                 options: {
                   sourceMap: false
                 }
@@ -856,7 +854,7 @@ module.exports={
             use: [
               /* config.module.rule('less').oneOf('vue').use('vue-style-loader') */
               {
-                loader: '//node_modules/vue-style-loader/index.js',
+                loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/vue-style-loader/index.js',
                 options: {
                   sourceMap: false,
                   shadowMode: false
@@ -864,7 +862,7 @@ module.exports={
               },
               /* config.module.rule('less').oneOf('vue').use('css-loader') */
               {
-                loader: '//node_modules/css-loader/dist/cjs.js',
+                loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/css-loader/dist/cjs.js',
                 options: {
                   sourceMap: false,
                   importLoaders: 2
@@ -872,7 +870,7 @@ module.exports={
               },
               /* config.module.rule('less').oneOf('vue').use('postcss-loader') */
               {
-                loader: '//node_modules/postcss-loader/src/index.js',
+                loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/postcss-loader/src/index.js',
                 options: {
                   sourceMap: false,
                   plugins: [
@@ -882,7 +880,7 @@ module.exports={
               },
               /* config.module.rule('less').oneOf('vue').use('less-loader') */
               {
-                loader: '/Users/heqin/Desktop/webpack/代码/node_modules/less-loader/dist/cjs.js',
+                loader: 'less-loader',
                 options: {
                   sourceMap: false
                 }
@@ -895,7 +893,7 @@ module.exports={
             use: [
               /* config.module.rule('less').oneOf('normal-modules').use('vue-style-loader') */
               {
-                loader: '//node_modules/vue-style-loader/index.js',
+                loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/vue-style-loader/index.js',
                 options: {
                   sourceMap: false,
                   shadowMode: false
@@ -903,7 +901,7 @@ module.exports={
               },
               /* config.module.rule('less').oneOf('normal-modules').use('css-loader') */
               {
-                loader: '//node_modules/css-loader/dist/cjs.js',
+                loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/css-loader/dist/cjs.js',
                 options: {
                   sourceMap: false,
                   importLoaders: 2,
@@ -914,7 +912,7 @@ module.exports={
               },
               /* config.module.rule('less').oneOf('normal-modules').use('postcss-loader') */
               {
-                loader: '//node_modules/postcss-loader/src/index.js',
+                loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/postcss-loader/src/index.js',
                 options: {
                   sourceMap: false,
                   plugins: [
@@ -924,7 +922,7 @@ module.exports={
               },
               /* config.module.rule('less').oneOf('normal-modules').use('less-loader') */
               {
-                loader: '/Users/heqin/Desktop/webpack/代码/node_modules/less-loader/dist/cjs.js',
+                loader: 'less-loader',
                 options: {
                   sourceMap: false
                 }
@@ -936,7 +934,7 @@ module.exports={
             use: [
               /* config.module.rule('less').oneOf('normal').use('vue-style-loader') */
               {
-                loader: '//node_modules/vue-style-loader/index.js',
+                loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/vue-style-loader/index.js',
                 options: {
                   sourceMap: false,
                   shadowMode: false
@@ -944,7 +942,7 @@ module.exports={
               },
               /* config.module.rule('less').oneOf('normal').use('css-loader') */
               {
-                loader: '//node_modules/css-loader/dist/cjs.js',
+                loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/css-loader/dist/cjs.js',
                 options: {
                   sourceMap: false,
                   importLoaders: 2
@@ -952,7 +950,7 @@ module.exports={
               },
               /* config.module.rule('less').oneOf('normal').use('postcss-loader') */
               {
-                loader: '//node_modules/postcss-loader/src/index.js',
+                loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/postcss-loader/src/index.js',
                 options: {
                   sourceMap: false,
                   plugins: [
@@ -962,7 +960,7 @@ module.exports={
               },
               /* config.module.rule('less').oneOf('normal').use('less-loader') */
               {
-                loader: '/Users/heqin/Desktop/webpack/代码/node_modules/less-loader/dist/cjs.js',
+                loader: 'less-loader',
                 options: {
                   sourceMap: false
                 }
@@ -981,7 +979,7 @@ module.exports={
             use: [
               /* config.module.rule('stylus').oneOf('vue-modules').use('vue-style-loader') */
               {
-                loader: '//node_modules/vue-style-loader/index.js',
+                loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/vue-style-loader/index.js',
                 options: {
                   sourceMap: false,
                   shadowMode: false
@@ -989,7 +987,7 @@ module.exports={
               },
               /* config.module.rule('stylus').oneOf('vue-modules').use('css-loader') */
               {
-                loader: '//node_modules/css-loader/dist/cjs.js',
+                loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/css-loader/dist/cjs.js',
                 options: {
                   sourceMap: false,
                   importLoaders: 2,
@@ -1000,7 +998,7 @@ module.exports={
               },
               /* config.module.rule('stylus').oneOf('vue-modules').use('postcss-loader') */
               {
-                loader: '//node_modules/postcss-loader/src/index.js',
+                loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/postcss-loader/src/index.js',
                 options: {
                   sourceMap: false,
                   plugins: [
@@ -1024,7 +1022,7 @@ module.exports={
             use: [
               /* config.module.rule('stylus').oneOf('vue').use('vue-style-loader') */
               {
-                loader: '//node_modules/vue-style-loader/index.js',
+                loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/vue-style-loader/index.js',
                 options: {
                   sourceMap: false,
                   shadowMode: false
@@ -1032,7 +1030,7 @@ module.exports={
               },
               /* config.module.rule('stylus').oneOf('vue').use('css-loader') */
               {
-                loader: '//node_modules/css-loader/dist/cjs.js',
+                loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/css-loader/dist/cjs.js',
                 options: {
                   sourceMap: false,
                   importLoaders: 2
@@ -1040,7 +1038,7 @@ module.exports={
               },
               /* config.module.rule('stylus').oneOf('vue').use('postcss-loader') */
               {
-                loader: '//node_modules/postcss-loader/src/index.js',
+                loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/postcss-loader/src/index.js',
                 options: {
                   sourceMap: false,
                   plugins: [
@@ -1064,7 +1062,7 @@ module.exports={
             use: [
               /* config.module.rule('stylus').oneOf('normal-modules').use('vue-style-loader') */
               {
-                loader: '//node_modules/vue-style-loader/index.js',
+                loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/vue-style-loader/index.js',
                 options: {
                   sourceMap: false,
                   shadowMode: false
@@ -1072,7 +1070,7 @@ module.exports={
               },
               /* config.module.rule('stylus').oneOf('normal-modules').use('css-loader') */
               {
-                loader: '//node_modules/css-loader/dist/cjs.js',
+                loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/css-loader/dist/cjs.js',
                 options: {
                   sourceMap: false,
                   importLoaders: 2,
@@ -1083,7 +1081,7 @@ module.exports={
               },
               /* config.module.rule('stylus').oneOf('normal-modules').use('postcss-loader') */
               {
-                loader: '//node_modules/postcss-loader/src/index.js',
+                loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/postcss-loader/src/index.js',
                 options: {
                   sourceMap: false,
                   plugins: [
@@ -1106,7 +1104,7 @@ module.exports={
             use: [
               /* config.module.rule('stylus').oneOf('normal').use('vue-style-loader') */
               {
-                loader: '//node_modules/vue-style-loader/index.js',
+                loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/vue-style-loader/index.js',
                 options: {
                   sourceMap: false,
                   shadowMode: false
@@ -1114,7 +1112,7 @@ module.exports={
               },
               /* config.module.rule('stylus').oneOf('normal').use('css-loader') */
               {
-                loader: '//node_modules/css-loader/dist/cjs.js',
+                loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/css-loader/dist/cjs.js',
                 options: {
                   sourceMap: false,
                   importLoaders: 2
@@ -1122,7 +1120,7 @@ module.exports={
               },
               /* config.module.rule('stylus').oneOf('normal').use('postcss-loader') */
               {
-                loader: '//node_modules/postcss-loader/src/index.js',
+                loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/postcss-loader/src/index.js',
                 options: {
                   sourceMap: false,
                   plugins: [
@@ -1151,15 +1149,15 @@ module.exports={
         use: [
           /* config.module.rule('js').use('cache-loader') */
           {
-            loader: '//node_modules/cache-loader/dist/cjs.js',
+            loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/cache-loader/dist/cjs.js',
             options: {
-              cacheDirectory: '//node_modules/.cache/babel-loader',
+              cacheDirectory: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/.cache/babel-loader',
               cacheIdentifier: '67a56416'
             }
           },
           /* config.module.rule('js').use('babel-loader') */
           {
-            loader: '//node_modules/babel-loader/lib/index.js'
+            loader: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/node_modules/babel-loader/lib/index.js'
           }
         ]
       }
@@ -1255,7 +1253,7 @@ module.exports={
       {
         title: '02.vue_cli',
         templateParameters: function () { /* omitted long function */ },
-        template: '//public/index.html'
+        template: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/public/index.html'
       }
     ),
     /* config.plugin('preload') */
@@ -1280,8 +1278,8 @@ module.exports={
     new CopyPlugin(
       [
         {
-          from: '//public',
-          to: '//dist',
+          from: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/public',
+          to: '/Users/heqin/Desktop/webpack/vue/02.vue_cli/dist',
           toType: 'dir',
           ignore: [
             '.DS_Store',

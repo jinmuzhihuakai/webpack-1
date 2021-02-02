@@ -134,7 +134,7 @@ module.exports = {
         }),
         new WorkboxWebpackPlugin.GenerateSW({
             //生成一个 servicework配置文件~
-            clientsClaim:true,//帮助servicewor快速启动
+            clientsClaim:true,//帮助servicework快速启动
             skipWaiting:true//删除旧的 servicework
         })
     ],

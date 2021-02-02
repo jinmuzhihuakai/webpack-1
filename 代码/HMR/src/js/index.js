@@ -7,6 +7,7 @@ function add(x,y){
 }
 print()
 console.log(add(3,8))
+console.log('dfdsfd')
 if(module.hot){
    //一旦  module.hot 为true,说明开启了HMR-->让HMR功能代码生效
    module.hot.accept('./print.js',function(){

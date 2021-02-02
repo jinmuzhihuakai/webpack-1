@@ -3,6 +3,9 @@ const {resolve}= require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCssAssetsWebpackPlugin=require('optimize-css-assets-webpack-plugin')
+const WorkboxWebpackPlugin=require('workbox-webpack-plugin')
+const AddAssetHtmlWebpackPlugin=require('add-asset-html-webpack-plugin')
+const webpack=require('webpack')
 // process.env.NODE_ENV = 'production'
 //复用loader
 const CommonCssLoader = [
@@ -19,16 +22,17 @@ const CommonCssLoader = [
     },
 ]
 module.exports={
-//     entry: {
-       
-//        index:['./src/js/index.js','./src/js/add.js'],
-        
-//        num:'./src/js/num.js'
-//    },
-       entry:'./src/js/index.js', //'./src/index.html'  
+        // entry:{
+        //    0: './src/js/index.js',
+        //     test:'./src/js/exter.js'
+        // },
+       entry:'/Users/heqin/Desktop/webpack/代码/dome/src/js/index.js', //'./src/index.html'  
      output: {
-        filename: 'js/[name].[contenthash:10].js',
+        //  filename:'js/index.js',
+        filename: 'js/[name].js',//
+        // filename:'js/[name].[contenthash:10].js',
         //输出文件目录（将来所有资源输出的公共目录）
+        chunkFilename:'[name]_chunk.js',
         path: resolve(__dirname, 'build'),
         publicPath:'/',
         // chunkFilename:'[name]_chunk.js',
@@ -92,32 +96,40 @@ module.exports={
                     {//js兼容处理
                         test: /\.js$/,
                         exclude: /node_modules/,
-                        loader: 'babel-loader',
-                        options: {
-                            //预设：指示babel做怎么样的兼容处理
-                            presets: [
-                                [
-                                    '@babel/preset-env',
-                                    {
-                                        //按需加载
-                                        useBuiltIns: 'usage',
-                                        //指定core-js版本
-                                        corejs: {
-                                            version: 3
-                                        },
-                                        //指定兼容性做到哪个版本浏览器
-                                        targets: {
-                                            chrome: '60',
-                                            firefox: '60',
-                                            ie: '9',
-                                            safari: '10',
-                                            edge: '17'
-                                        }
-                                    }
-                                ]
-                            ],
-                            cacheDirectory:true
-                        }
+                        use:[
+                            {
+                            loader:'thread-loader'
+                            },
+                            {
+                                loader: 'babel-loader',
+                                options: {
+                                    //预设：指示babel做怎么样的兼容处理
+                                    presets: [
+                                        [
+                                            '@babel/preset-env',
+                                            {
+                                                //按需加载
+                                                useBuiltIns: 'usage',
+                                                //指定core-js版本
+                                                corejs: {
+                                                    version: 3
+                                                },
+                                                //指定兼容性做到哪个版本浏览器
+                                                targets: {
+                                                    chrome: '60',
+                                                    firefox: '60',
+                                                    ie: '9',
+                                                    safari: '10',
+                                                    edge: '17'
+                                                }
+                                            }
+                                        ]
+                                    ],
+                                    // cacheDirectory:true
+                                }
+                            }
+                        ]
+                
                     },
                 ]
             }
@@ -136,10 +148,22 @@ module.exports={
         }),
         new MiniCssExtractPlugin({
             //对输出的css文件重命名
-            filename: 'css/built.[contenthash:10].css'
+            filename: 'css/built.css',
+            // filename:'css/built.[contenthash:10].css'
         }),
          //压缩css
-        new OptimizeCssAssetsWebpackPlugin()
+        new OptimizeCssAssetsWebpackPlugin(),
+        // new WorkboxWebpackPlugin.GenerateSW({
+        //     clientsClaim:true,
+        //     skipWaiting:true
+        // }),
+        // new webpack.DllReferencePlugin({
+        //     manifest:resolve(__dirname,'dll/manifest.json')
+        //    }),
+        //    //将某个文件打包输出去，并在html中自动引入该文件
+        //    new AddAssetHtmlWebpackPlugin({
+        //          filepath:resolve(__dirname,'dll/jquery.js')
+        //    })
     ],
     devServer:{
         contentBase:resolve(__dirname,'build'),
@@ -156,7 +180,7 @@ module.exports={
          //域名
         host:'localhost' ,
         //开发服务器端口号
-        port:'5005',
+        port:5005,
         hot:true,
         clientLogLevel:'none',
         quiet:true,
@@ -172,14 +196,25 @@ module.exports={
     },
     resolve:{
       alias:{
-          $css:resolve(__dirname,'src/css')
+          $css:resolve(__dirname,'src/css'),
+
       },
       extensions:['.js','.json','.css','.less'],
       modules:[resolve(__dirname,'../../node_modules'),'node_modules']
     },
     // devtool:'source-map',
-    //  mode: 'development',//html,js压缩
-     mode: 'production'
+     mode: 'development',
+//    optimization:{
+//     splitChunks:{
+//         chunks:'all'
+//     }
+// },
+ externals:{//script手动引入下，目的比打包这些大库快多了
+        
+    // //忽略库名---npm包名
+        jquery:'jQuery'
+    }
+    //  mode: 'production'
 }
 
 

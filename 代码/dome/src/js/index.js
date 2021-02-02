@@ -1,16 +1,44 @@
 // 引入iconfont样式文件
 import '../asstes/iconfont.css';
 import '../css/index.less';
-import { add } from './add';
+// import $ from 'jquery';
 
-console.log('index.js文件被加载了');
+import { add } from './add';
+// import { mul } from './loading';
+/* eslint-disable */
+console.log($);
+console.log('index.js文件被加载了5');
+// 代码分割ss
+// import(/* webpackChunkName:'test' */'./num')
+//   .then((result) => {
+//     // 文件加载成功
+//     console.log(result);
+//   })
+//   .catch(() => {
+//     console.log('文件加载失败');
+//   });
 if (module.hot) {
-  // 一旦  module.hot 为true,说明开启了HMR-->让HMR功能代码生效
   module.hot.accept('./add', () => {
-    // 方法会监听print.js文件的变化，一旦发生变化，其他模块不会重新打包构建
-    // 会执行后面的回调函数
     add(5, 6);
   });
 }
-console.log('55555');
-console.log('1111');
+// // 懒加载
+// 预加载 webpackPrefetch:true
+document.getElementById('btn').onclick = function () {
+  import(/* webpackChunkName:'loading' */'./loading').then(({ mul }) => {
+    console.log(mul(4, 5));
+  });
+};
+
+// if ('serviceWorker' in navigator) {
+//   window.addEventListener('load', () => {
+//     navigator.serviceWorker
+//       .register('/service-worker.js')
+//       .then(() => {
+//         console.log('sw注册成功了');
+//       })
+//       .catch(() => {
+//         console.log('sw注册失败了');
+//       });
+//   });
+// }
